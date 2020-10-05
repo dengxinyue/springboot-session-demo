@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>传递对象</title>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+<img th:src="${img.src}"/>
+</br>
+<a th:href="${img.url}">去百度</a>
+</br>
+<span th:text="${user.id}"></span>
+<span th:text="${user.name}"></span>
+<span th:text="${user.age}"></span>
+
+</body>
+</html>

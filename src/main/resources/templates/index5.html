@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>条件判断选择</title>
+    <link rel="stylesheet" type="text/css" href="/css/webbase.css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<!--引入片段头-->
+<div th:include="~{muban::myhead1}"></div>
+<div th:replace="~{muban::myhead1}"></div>
+<div th:insert="~{muban::myhead1}"></div>
+<!--判断flag如果等于yes输出一段话-->
+<h1 th:if="${flag}=='yes'">我是flag，等于yes</h1>
+<!--<h1 th:if="${flag}!='yes'">我是flag，等于no</h1>-->
+<!--判断flag不等于yes输出-->
+<h1 th:unless="${flag}=='yes'">我是flag，等于no</h1>
+
+<!--选择语句，输出内容-->
+<div th:switch="${menu}">
+<!--选择1语句-->
+    <h5 th:case="'admin'">admin</h5>
+    <h5 th:case="${one}">manager</h5>
+</div>
+<div th:include="~{muban::myfoot1}"></div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串拼接</title>
+</head>
+<body>
+<!--李美丽，你好，欢迎你来学习，你的IT人生即将开启！-->
+<h1 th:text="${name}+',你好'+${msg}+',你的IT人生即将开启!'"></h1>
+
+<h2 th:text="|${name},你好,${msg},你的IT人生即将开启|"></h2>
+</body>
+</html>
